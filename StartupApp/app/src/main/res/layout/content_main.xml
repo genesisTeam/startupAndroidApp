@@ -12,8 +12,13 @@
     tools:context=".ChecklistActivity"
     tools:showIn="@layout/activity_checklist">
 
-    <TextView
+
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello Worl!" />
+        android:text="launchLesson"
+        android:id="@+id/button_launch_lesson"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="119dp" />
 </RelativeLayout>

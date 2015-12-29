@@ -1,15 +1,19 @@
 package com.genesisteam.apps.startupapp;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ListAdapter;
+import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ChecklistActivity extends ListActivity {
+    static Intent lessonIntent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +22,13 @@ public class ChecklistActivity extends ListActivity {
 
         ListAdapter checklistAdapter = new ChecklistAdapter(this, R.layout.row_checklist, new String[] {"Lesson 1", "Lesson 2"});
         setListAdapter(checklistAdapter);
+        lessonIntent = new Intent(this, LessonActivity.class);
+    }
+
+    @Override
+    protected void onListItemClick(ListView l, View v, int position, long id) {
+        super.onListItemClick(l, v, position, id);
+        startActivity(lessonIntent);
     }
 
     @Override
