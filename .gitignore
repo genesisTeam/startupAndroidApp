@@ -25,3 +25,25 @@ proguard/
 
 # Log Files
 *.log
+
+# Mac OS X clutter
+*.DS_Store
+
+# Intellij project files
+*.iml
+
+## Directory-based project format:
+.idea/
+
+## File-based project format:
+*.ipr
+*.iws
+
+## Plugin-specific files:
+# Intellij
+out/
+
+# Other
+/local.properties
+/build
+/captures
