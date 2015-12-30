@@ -32,7 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/imageButton"
-        android:src="@drawable/Profile1"
+        android:src="@drawable/profile1"
         android:adjustViewBounds="true"
         android:layout_alignLeft="@+id/include"
         android:layout_alignStart="@+id/include" />
