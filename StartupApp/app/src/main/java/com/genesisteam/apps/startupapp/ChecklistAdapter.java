@@ -1,6 +1,7 @@
 package com.genesisteam.apps.startupapp;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,6 +30,14 @@ public class ChecklistAdapter extends ArrayAdapter<String> {
         }
 
         String lessonTitle = getItem(position);
+
+        Resources res = getContext().getResources();
+        if(position % 2 == 0) {
+            rowView.setBackgroundColor(res.getColor(R.color.lightGray));
+        } else {
+            rowView.setBackgroundColor(res.getColor(R.color.darkGray));
+        }
+
         TextView lessonText = (TextView) rowView.findViewById(R.id.lesson_name);
         lessonText.setText(lessonTitle);
 
