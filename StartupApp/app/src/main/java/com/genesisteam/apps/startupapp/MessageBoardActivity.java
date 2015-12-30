@@ -1,12 +1,11 @@
 package com.genesisteam.apps.startupapp;
 
-import android.app.ActionBar;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
@@ -14,36 +13,54 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.TextView;
-import android.support.v7.app.ActionBar.LayoutParams;
+import android.widget.Toast;
 
-public class LessonActivity extends AppCompatActivity {
+public class MessageBoardActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lesson);
-        String title = "LESSON 1";
-        setupActionBar(title);
-        final Intent inputIntent = new Intent(this, InputActivity.class);
+        setContentView(R.layout.activity_message_board);
 
-        final ImageButton next = (ImageButton) findViewById(R.id.button_lesson_next);
-        next.setOnClickListener(new View.OnClickListener() {
+        String title = "Categories";
+        setupActionBar(title);
+        final Intent postIntent = new Intent(this, BoardPostsActivity.class);
+        final Toast toast = Toast.makeText(this, "Sorry, feature not implemented yet.", Toast.LENGTH_SHORT);
+
+        final ImageButton cat1 = (ImageButton) findViewById(R.id.cat1);
+        cat1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(inputIntent);
+                startActivity(postIntent);
             }
         });
-        next.setOnTouchListener(new View.OnTouchListener() {
+        cat1.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    next.setImageResource(R.drawable.button_next_clicked);
+                    cat1.setImageResource(R.drawable.getting_started_clicked);
                 }
                 if (event.getAction() == MotionEvent.ACTION_UP) {
-                    next.setImageResource(R.drawable.button_next);
+                    cat1.setImageResource(R.drawable.getting_started);
                 }
                 return false;
+            }
+        });
+
+        final ImageButton cat2 = (ImageButton) findViewById(R.id.cat2);
+        cat2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toast.show();
+            }
+        });
+
+
+        final ImageButton cat3 = (ImageButton) findViewById(R.id.cat3);
+        cat3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toast.show();
             }
         });
     }
@@ -58,9 +75,9 @@ public class LessonActivity extends AppCompatActivity {
         ab.setTitle(title);
         LayoutInflater inflator = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View v = inflator.inflate(R.layout.action_bar_logo, null);
-        LayoutParams lp = new LayoutParams(
-                LayoutParams.WRAP_CONTENT,
-                LayoutParams.WRAP_CONTENT,
+        ActionBar.LayoutParams lp = new ActionBar.LayoutParams(
+                ActionBar.LayoutParams.WRAP_CONTENT,
+                ActionBar.LayoutParams.WRAP_CONTENT,
                 Gravity.CENTER
         );
         ab.setCustomView(v, lp);

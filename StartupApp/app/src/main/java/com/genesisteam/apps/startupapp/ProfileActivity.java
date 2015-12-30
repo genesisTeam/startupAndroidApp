@@ -37,10 +37,10 @@ public class ProfileActivity extends AppCompatActivity {
 
         );
 
-        public void BuisnessProfile (View view) {
-
-
-    }
+//        public void BuisnessProfile (View view) {
+//
+//
+//    }
 //        nextProf.setOnTouchListener(new View.OnTouchListener()
 //
 //                                {
