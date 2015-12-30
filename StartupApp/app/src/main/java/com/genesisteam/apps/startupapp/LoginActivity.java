@@ -1,6 +1,7 @@
 package com.genesisteam.apps.startupapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -29,28 +30,6 @@ public class LoginActivity extends AppCompatActivity {
         setupVariables();
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
     private void setupVariables() {
         username = (EditText) findViewById(R.id.username);
         password = (EditText) findViewById(R.id.password);
@@ -61,6 +40,8 @@ public class LoginActivity extends AppCompatActivity {
                     Toast toast = Toast.makeText(getApplicationContext(), "Hello Urbanites!", Toast.LENGTH_SHORT);
                     toast.setGravity(Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
                     toast.show();
+                    Intent intent = new Intent(v.getContext(), ChecklistActivity.class);
+                    startActivity(intent);
                 } else {
                     Toast toast = Toast.makeText(getApplicationContext(), "Sorry, try again!", Toast.LENGTH_SHORT);
                     toast.setGravity(Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
