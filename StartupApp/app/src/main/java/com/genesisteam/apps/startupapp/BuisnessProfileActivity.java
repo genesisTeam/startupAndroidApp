@@ -14,8 +14,10 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
-public class ProfileActivity extends AppCompatActivity {
-
+/**
+ * Created by Tim A on 12/30/2015.
+ */
+public class BuisnessProfileActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,20 +29,15 @@ public class ProfileActivity extends AppCompatActivity {
         final ImageView nextProf = (ImageView) findViewById(R.id.imageButton);
         nextProf.setOnClickListener(new View.OnClickListener()
 
-                                {
-                                    @Override
-                                    public void onClick(View v) {
+                                    {
+                                        @Override
+                                        public void onClick(View v) {
 
 
+                                        }
                                     }
-                                }
 
         );
-
-        public void BuisnessProfile (View view) {
-
-
-    }
 //        nextProf.setOnTouchListener(new View.OnTouchListener()
 //
 //                                {
@@ -75,6 +72,9 @@ public class ProfileActivity extends AppCompatActivity {
         ab.setDisplayShowCustomEnabled(true);
         ab.setDisplayShowTitleEnabled(true);
     }
+
+
+
 
 
 
