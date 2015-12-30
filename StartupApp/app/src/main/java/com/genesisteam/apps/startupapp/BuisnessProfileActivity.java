@@ -21,23 +21,23 @@ public class BuisnessProfileActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lesson);
+        setContentView(R.layout.activity_buisness_profile);
         String title = "PROFILE";
         setupActionBar(title);
 
 
-        final ImageView nextProf = (ImageView) findViewById(R.id.imageButton);
-        nextProf.setOnClickListener(new View.OnClickListener()
-
-                                    {
-                                        @Override
-                                        public void onClick(View v) {
-
-
-                                        }
-                                    }
-
-        );
+//        final ImageView nextProf = (ImageView) findViewById(R.id.imageButton);
+//        nextProf.setOnClickListener(new View.OnClickListener()
+//
+//                                    {
+//                                        @Override
+//                                        public void onClick(View v) {
+//
+//
+//                                        }
+//                                    }
+//
+//        );
 //        nextProf.setOnTouchListener(new View.OnTouchListener()
 //
 //                                {

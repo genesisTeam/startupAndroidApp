@@ -38,10 +38,7 @@ public class ProfileActivity extends AppCompatActivity {
 //
 //        );
 
-//        public void BuisnessProfile (View view) {
-//
-//
-//    }
+
 //        nextProf.setOnTouchListener(new View.OnTouchListener()
 //
 //                                {
@@ -82,6 +79,9 @@ public class ProfileActivity extends AppCompatActivity {
         ab.setDisplayShowTitleEnabled(true);
     }
 
-
+    public void BuisnessProfile (View view) {
+        Intent intent = new Intent(this, BuisnessProfileActivity.class);
+        startActivity(intent);
+    }
 
 }
