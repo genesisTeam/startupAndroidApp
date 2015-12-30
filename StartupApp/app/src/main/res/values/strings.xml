@@ -4,4 +4,9 @@
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_lesson">LessonActivity</string>
     <string name="title_activity_profile">ProfileActivity</string>
+    <string name="title_activity_input">InputActivity</string>
+    <string name="title_activity_completed">CompletedActivity</string>
+    <string name="lesson_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex augue, tincidunt quis vestibulum vitae, dictum ut mi. Etiam metus quam, pretium egestas lorem et, fringilla interdum svapien. Etiam porta nisi id interdum molestie. Mauris risus nisi, pulvinar a est maximus, varius elementum lacus. Aliquam velit ex, maximus eget rutrum ac, elementum ut massa. Pellentesque sagittis mi nec sapien efficitur, ut ultricies nulla laoreet.</string>
+    <string name="title_activity_message_board">MessageBoard</string>
+    <string name="title_activity_board_posts">BoardPosts</string>
 </resources>

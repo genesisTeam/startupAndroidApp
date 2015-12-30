@@ -29,6 +29,22 @@
         <activity
             android:name=".ProfileActivity"
             android:label="@string/title_activity_profile"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".InputActivity"
+            android:label="@string/title_activity_input"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".CompletedActivity"
+            android:label="@string/title_activity_completed"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".MessageBoardActivity"
+            android:label="@string/title_activity_message_board"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".BoardPostsActivity"
+            android:label="@string/title_activity_board_posts"
             android:theme="@style/AppTheme"></activity>
     </application>
 
