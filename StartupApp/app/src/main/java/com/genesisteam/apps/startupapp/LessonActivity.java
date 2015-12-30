@@ -48,6 +48,11 @@ public class LessonActivity extends AppCompatActivity {
         });
     }
 
+    public void goToProfile(View view) {
+        Intent profileIntent = new Intent(this, ProfileActivity.class);
+        startActivity(profileIntent);
+    }
+
     private void setupActionBar(String title) {
         android.support.v7.app.ActionBar ab = getSupportActionBar();
         ab.setTitle(title);

@@ -1,6 +1,7 @@
 package com.genesisteam.apps.startupapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -20,6 +21,11 @@ public class BoardPostsActivity extends AppCompatActivity {
 
         String title = "Forums";
         setupActionBar(title);
+    }
+
+    public void goToProfile(View view) {
+        Intent profileIntent = new Intent(this, ProfileActivity.class);
+        startActivity(profileIntent);
     }
 
     private void setupActionBar(String title) {
